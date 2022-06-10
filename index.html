@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Drop Down Options</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="src/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h3>Select, Options, OptGroup</h3>
+    </header>
+    <form action="#" name="myForm" id="myForm">
+        <div class="formBox">
+            <label for="thing">Username</label>
+            <input type="email" name="thing" id="thing">
+        </div>
+        <div class="formBox">
+            <label for="flavours">Favorite Flavors</label>
+            <select name="flavours" multiple id="flavours">
+                <optgroup label="Maybe">
+                    <option value="dust">Dust</option>
+                    <option value="beer">Beer</option>
+                    <option value="cheese">Cheese</option>
+                </optgroup>
+                <optgroup label="Maybe Not">
+                    <option value="cat">Cat</option>
+                    <option value="rust">Rust</option>
+                    <option value="octopus">Octopus</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="formBox buttons">
+            <button id="btnSend">Send</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
