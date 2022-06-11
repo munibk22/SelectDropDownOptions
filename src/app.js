@@ -12,7 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document
         .getElementById('flavours')
         .addEventListener('input', handleSelect);
-    document.getElementById('thing').addEventListener('input', handleData);
+    document
+        .getElementById('username')
+        .addEventListener('input', handleData);
+    document
+        .getElementById('animals')
+        .addEventListener('input', handleAnimalSelect);
 })
 
 function handleSelect(ev) {
@@ -29,4 +34,17 @@ function handleData(ev) {
     let theInput = ev.target;
     console.log(theInput.value, typeof theInput.value);
 
+}
+
+function handleAnimalSelect(e) {
+    let select = e.target;
+    console.log(select.value);
+    // Interater Option 1
+    // let choices = [];
+    // for (let i = 0; i < select.selectedOptions.length; i++) {
+    //     choices.push(select.selectedOptions[i].value);
+    // }
+    // Iterate Option 2
+    const choices = [].map.call(select.selectedOptions, option => option.value);
+    console.log(choices);
 }
