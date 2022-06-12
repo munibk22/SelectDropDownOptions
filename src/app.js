@@ -73,32 +73,38 @@ function populate(strngA, strgB) {
             let optionArry = [];
             optionArry.push("Camaro", "Corvette", "Equinox")
             console.log(optionArry);
-            slct2.removeAttribute('multiple')
+            s2.removeAttribute('multiple')
             optionArry.forEach(car => {
                 const optionElement = document.createElement('option');
+                optionElement.setAttribute('value', car.toLowerCase());
+                // optionElement.value = car.toLowerCase();
                 optionElement.textContent = car;
                 s2.append(optionElement);
             })
             break;
         case "Ford":
-            {
+            function fordOptions() {
                 let optionArry = [];
                 optionArry.push("Edge", "Mustang", "Escape", "Taures")
-                slct2.removeAttribute('multiple')
-                optionArry.forEach(car => {
+                s2.removeAttribute('multiple')
+                optionArry.forEach(async (car) => {
                     const optionElement = document.createElement('option');
+                    optionElement.value = car.toLowerCase();
+                    // await optionElement.setAttribute('value', "car2");
                     optionElement.innerText = car;
                     s2.appendChild(optionElement);
                 })
             }
+            fordOptions();
             break;
         case "Dodge":
             {
                 let optionArry = [];
                 optionArry.push('Viper', "Ram", 'Impala', 'HellCat', 'Durango')
-                slct2.setAttribute('multiple', '"true"')
+                s2.setAttribute('multiple', true)
                 optionArry.map(car => {
                     const optionE = document.createElement('option');
+                    optionE.setAttribute('value', car.toLowerCase());
                     optionE.innerHTML = car;
 
                     s2.appendChild(optionE);
