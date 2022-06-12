@@ -13,46 +13,74 @@
 <body>
     <div class="container">
 
+        <div className="" style="padding:2%">
 
-        <header>
-            <h3>Select, Options, OptGroup</h3>
-        </header>
-        <form action="#" name="myForm" id="myForm">
-            <div class="formBox">
-                <label for="username">Username</label>
-                <input type="email" name="username" id="username">
-            </div>
-            <div class="formBox">
-                <label for="flavours">Favorite Flavors</label>
-                <select name="flavours" id="flavours">
-                    <optgroup label="Maybe">
-                        <option value="dust">Dust</option>
-                        <option value="beer">Beer</option>
-                        <option value="cheese" selected>Cheese</option>
-                    </optgroup>
-                    <optgroup label="Maybe Not">
-                        <option value="cat">Cat</option>
-                        <option value="rust">Rust</option>
-                        <option value="octopus">Octopus</option>
-                    </optgroup>
+
+            <header>
+                <h3>Select, Options, OptGroup</h3>
+            </header>
+            <form action="#" name="myForm" id="myForm">
+                <div class="formBox">
+                    <label for="username">Username</label>
+                    <input type="input" name="username" id="username">
+                </div>
+                <div class="formBox">
+                    <label for="flavours">Favorite Flavors</label>
+                    <select name="flavours" id="flavours">
+                        <optgroup label="Maybe">
+                            <option value="dust">Dust</option>
+                            <option value="beer">Beer</option>
+                            <option value="cheese" selected>Cheese</option>
+                        </optgroup>
+                        <optgroup label="Maybe Not">
+                            <option value="cat">Cat</option>
+                            <option value="rust">Rust</option>
+                            <option value="octopus">Octopus</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="formBox2">
+                    <label for="animals">Favorite Animals</label>
+                    <select name="animals" id="animals" multiple>
+                        <optgroup label="Animals">
+                            <option value="cat">Cat</option>
+                            <option value="rust">Rust</option>
+                            <option value="octopus">Octopus</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="formBox buttons">
+                    <button id="btnSend">Send</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="" style="padding:5%">
+
+
+            <h2>Choose Your Car</h2>
+            <hr />
+
+            <div class="">
+                Choose Your Make:
+                <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+                    <option value="">----</option>
+                    </option>
+                    <option value="Chevy">Chevy</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Ford">Ford</option>
                 </select>
             </div>
+            <hr />
+            <div class="">
+                Choose Car Model:
+                <select name="slct2" id="slct2">
+                    <option value="">----</option>
 
-            <div class="formBox2">
-                <label for="animals">Favorite Animals</label>
-                <select name="animals" id="animals" multiple>
-                    <optgroup label="Animals">
-                        <option value="cat">Cat</option>
-                        <option value="rust">Rust</option>
-                        <option value="octopus">Octopus</option>
-                    </optgroup>
                 </select>
             </div>
-            <div class="formBox buttons">
-                <button id="btnSend">Send</button>
-            </div>
-
-        </form>
+        </div>
     </div>
 </body>
 
