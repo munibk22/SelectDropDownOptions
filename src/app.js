@@ -73,6 +73,7 @@ function populate(strngA, strgB) {
             let optionArry = [];
             optionArry.push("Camaro", "Corvette", "Equinox")
             console.log(optionArry);
+            slct2.removeAttribute('multiple')
             optionArry.forEach(car => {
                 const optionElement = document.createElement('option');
                 optionElement.textContent = car;
@@ -83,6 +84,7 @@ function populate(strngA, strgB) {
             {
                 let optionArry = [];
                 optionArry.push("Edge", "Mustang", "Escape", "Taures")
+                slct2.removeAttribute('multiple')
                 optionArry.forEach(car => {
                     const optionElement = document.createElement('option');
                     optionElement.innerText = car;
